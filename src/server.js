@@ -9,6 +9,7 @@ const inert = require('inert');
 async function create() {
     const server = new Hapi.Server({
         port: process.env.PORT,
+        host: process.env.HOST,
         routes: {
             files: {
                 relativeTo: path.join(__dirname, 'public')
